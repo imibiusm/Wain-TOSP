@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#071426" />
+  <meta name="description" content="WAIN — Terms of Service, Privacy Policy and platform guidelines." />
+  <title>WAIN — Terms & Policies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#071426', navy: '#0A1D35', panel: '#0D2542',
+            line: '#1B3B5E', accent: '#4EA5FF', ice: '#C9E5FF'
+          },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: dark; }
+    body { font-family: 'DM Sans', sans-serif; background:#071426; }
+    h1,h2,h3,.display { font-family:'Space Grotesk',sans-serif; }
+    .grid-bg { background-image:linear-gradient(rgba(78,165,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(78,165,255,.045) 1px,transparent 1px); background-size:48px 48px; }
+    .glow { background:radial-gradient(circle,rgba(39,130,224,.20),transparent 68%); }
+    .reveal { opacity:0; transform:translateY(18px); transition:opacity .7s ease,transform .7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .nav-link.active { color:#8bc7ff; background:rgba(78,165,255,.10); border-color:rgba(78,165,255,.22); }
+    .policy-section { scroll-margin-top:110px; }
+    .accordion-content { display:grid; grid-template-rows:0fr; transition:grid-template-rows .3s ease; }
+    .accordion-content > div { overflow:hidden; }
+    .accordion.open .accordion-content { grid-template-rows:1fr; }
+    .accordion-chevron { transition:transform .3s ease; }
+    .accordion.open .accordion-chevron { transform:rotate(180deg); }
+    ::selection { background:#287dcc; color:white; }
+    @media (prefers-reduced-motion: reduce) {
+      *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; scroll-behavior:auto!important; }
+      .reveal { opacity:1; transform:none; }
+    }
+  </style>
+</head>
+<body class="text-slate-200 antialiased">
+  <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+    <div class="absolute -top-64 left-1/4 h-[620px] w-[620px] rounded-full glow"></div>
+    <div class="absolute top-[700px] -right-72 h-[600px] w-[600px] rounded-full glow opacity-60"></div>
+    <div class="absolute inset-0 grid-bg opacity-60"></div>
+  </div>
+
+  <div class="fixed top-0 left-0 z-50 h-[3px] w-full bg-white/5">
+    <div id="readingProgress" class="h-full w-0 bg-gradient-to-r from-sky-500 to-blue-300"></div>
+  </div>
+
+  <header class="sticky top-0 z-40 border-b border-white/[.07] bg-ink/80 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+      <a href="#top" class="flex items-center gap-3" aria-label="WAIN home">
+        <span class="grid h-10 w-10 place-items-center rounded-xl border border-sky-400/30 bg-sky-400/10 text-sm font-bold tracking-widest text-sky-300">W</span>
+        <span class="display text-lg font-bold tracking-[.2em] text-white">WAIN<span class="text-sky-400">.</span></span>
+      </a>
+      <nav class="hidden items-center gap-2 md:flex">
+        <a href="#terms" class="rounded-lg px-3 py-2 text-sm text-slate-400 transition hover:bg-white/5 hover:text-white">Terms</a>
+        <a href="#privacy" class="rounded-lg px-3 py-2 text-sm text-slate-400 transition hover:bg-white/5 hover:text-white">Privacy</a>
+        <a href="#guidelines" class="rounded-lg px-3 py-2 text-sm text-slate-400 transition hover:bg-white/5 hover:text-white">Guidelines</a>
+        <a href="#contact" class="ml-2 rounded-lg border border-sky-400/30 bg-sky-400/10 px-4 py-2 text-sm font-semibold text-sky-200 transition hover:bg-sky-400/20">Contact</a>
+      </nav>
+      <button id="mobileMenuButton" class="rounded-lg border border-white/10 p-2 text-slate-300 md:hidden" aria-label="Open navigation" aria-expanded="false">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-white/[.07] px-5 py-3 md:hidden">
+      <div class="flex flex-col gap-1">
+        <a href="#terms" class="rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/5">Terms of Service</a>
+        <a href="#privacy" class="rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/5">Privacy Policy</a>
+        <a href="#guidelines" class="rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/5">Community Guidelines</a>
+        <a href="#contact" class="rounded-lg px-3 py-2 text-sm text-slate-300 hover:bg-white/5">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="relative mx-auto max-w-7xl px-5 pb-16 pt-20 lg:px-8 lg:pb-24 lg:pt-28">
+      <div class="reveal max-w-3xl">
+        <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/[.07] px-3 py-1.5 text-xs font-semibold uppercase tracking-[.18em] text-sky-300">
+          <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-sky-400"></span>
+          WAIN · Legal centre
+        </div>
+        <h1 class="display text-5xl font-semibold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">Clear rules.<br><span class="bg-gradient-to-r from-sky-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">Better sessions.</span></h1>
+        <p class="mt-7 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">The policies that keep WAIN reliable, fair, and safe for every ERLC community we support. Take a moment to understand how the platform works and what we expect from everyone using it.</p>
+        <div class="mt-9 flex flex-wrap items-center gap-3">
+          <a href="#terms" class="group inline-flex items-center gap-2 rounded-xl bg-sky-500 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-sky-950/40 transition hover:-translate-y-0.5 hover:bg-sky-400">Read the policies <span class="transition group-hover:translate-x-1">→</span></a>
+          <span class="inline-flex items-center gap-2 px-2 py-3 text-xs text-slate-500"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Built for the WAIN community</span>
+        </div>
+      </div>
+      <div class="reveal mt-16 grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-3">
+        <div class="rounded-2xl border border-white/[.08] bg-white/[.025] p-5 backdrop-blur">
+          <div class="mb-3 text-sky-300"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 7.8 7.5 9.5 4.3-1.7 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <p class="font-semibold text-white">Fair use</p><p class="mt-1 text-xs leading-5 text-slate-500">Consistent expectations for every user.</p>
+        </div>
+        <div class="rounded-2xl border border-white/[.08] bg-white/[.025] p-5 backdrop-blur">
+          <div class="mb-3 text-sky-300"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/></svg></div>
+          <p class="font-semibold text-white">Privacy-minded</p><p class="mt-1 text-xs leading-5 text-slate-500">A clear approach to information handling.</p>
+        </div>
+        <div class="rounded-2xl border border-white/[.08] bg-white/[.025] p-5 backdrop-blur">
+          <div class="mb-3 text-sky-300"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h16v12H8l-4 3V5Z"/><path d="M8 9h8M8 13h5"/></svg></div>
+          <p class="font-semibold text-white">Clear support</p><p class="mt-1 text-xs leading-5 text-slate-500">Know where to go when you need help.</p>
+        </div>
+      </div>
+      <div class="pointer-events-none absolute right-0 top-24 hidden h-80 w-80 rounded-full border border-sky-300/[.06] lg:block"></div>
+      <div class="pointer-events-none absolute right-12 top-36 hidden h-56 w-56 rounded-full border border-sky-300/[.08] lg:block"></div>
+      <div class="pointer-events-none absolute right-[135px] top-[215px] hidden h-2 w-2 rounded-full bg-sky-300 shadow-[0_0_30px_8px_rgba(78,165,255,.4)] lg:block"></div>
+    </section>
+
+    <section class="mx-auto grid max-w-7xl gap-10 px-5 pb-24 lg:grid-cols-[240px_minmax(0,1fr)] lg:px-8">
+      <aside class="h-fit lg:sticky lg:top-28">
+        <div class="rounded-2xl border border-white/[.08] bg-navy/70 p-4 backdrop-blur-xl">
+          <p class="px-3 pb-3 text-[10px] font-bold uppercase tracking-[.2em] text-slate-500">On this page</p>
+          <nav id="sideNav" class="flex gap-1 overflow-x-auto lg:flex-col">
+            <a href="#overview" class="nav-link active whitespace-nowrap rounded-lg border border-transparent px-3 py-2.5 text-sm text-slate-400 transition hover:text-white">Overview</a>
+            <a href="#terms" class="nav-link whitespace-nowrap rounded-lg border border-transparent px-3 py-2.5 text-sm text-slate-400 transition hover:text-white">Terms of Service</a>
+            <a href="#privacy" class="nav-link whitespace-nowrap rounded-lg border border-transparent px-3 py-2.5 text-sm text-slate-400 transition hover:text-white">Privacy Policy</a>
+            <a href="#guidelines" class="nav-link whitespace-nowrap rounded-lg border border-transparent px-3 py-2.5 text-sm text-slate-400 transition hover:text-white">Community Guidelines</a>
+            <a href="#cookies" class="nav-link whitespace-nowrap rounded-lg border border-transparent px-3 py-2.5 text-sm text-slate-400 transition hover:text-white">Cookies</a>
+            <a href="#contact" class="nav-link whitespace-nowrap rounded-lg border border-transparent px-3 py-2.5 text-sm text-slate-400 transition hover:text-white">Contact</a>
+          </nav>
+          <div class="mt-5 border-t border-white/[.07] pt-4">
+            <p class="px-3 text-xs leading-5 text-slate-500">Last updated</p>
+            <p class="px-3 pt-1 text-sm font-medium text-slate-300">08/11/26</p>
+          </div>
+        </div>
+        <div class="mt-4 hidden rounded-2xl border border-sky-400/15 bg-sky-400/[.04] p-4 lg:block">
+          <p class="text-sm font-semibold text-sky-200">Need a hand?</p>
+          <p class="mt-1 text-xs leading-5 text-slate-500">For policy questions, reach out to the WAIN team.</p>
+          <a href="#contact" class="mt-3 inline-flex text-xs font-semibold text-sky-300 hover:text-white">Get in touch ↗</a>
+        </div>
+      </aside>
+
+      <div class="min-w-0">
+        <section id="overview" class="policy-section reveal mb-12">
+          <p class="text-xs font-bold uppercase tracking-[.2em] text-sky-400">01 / Start here</p>
+          <h2 class="display mt-3 text-3xl font-semibold text-white">The essentials</h2>
+          <p class="mt-4 max-w-3xl leading-7 text-slate-400">WAIN is an ERLC (Emergency Response: Liberty County) community management platform. These documents explain the conditions for using WAIN, how information may be handled, and the standards expected of platform users and community staff.</p>
+          <div class="mt-6 rounded-xl border border-amber-300/15 bg-amber-300/[.05] p-4">
+            <p class="text-sm font-semibold text-amber-200">Before publishing</p>
+            <p class="mt-1 text-sm leading-6 text-slate-400"></p>
+          </div>
+        </section>
+
+        <section id="terms" class="policy-section reveal mb-12 border-t border-white/[.08] pt-10">
+          <p class="text-xs font-bold uppercase tracking-[.2em] text-sky-400">02 / Agreement</p>
+          <h2 class="display mt-3 text-3xl font-semibold text-white">Terms of Service</h2>
+          <p class="mt-3 text-sm text-slate-500">These terms govern access to and use of WAIN.</p>
+          <div class="mt-7 space-y-3">
+            <article class="accordion open rounded-xl border border-white/[.08] bg-white/[.025]">
+              <button class="accordion-trigger flex w-full items-center justify-between gap-4 p-5 text-left" aria-expanded="true"><span class="font-semibold text-slate-100">1. Acceptance of these terms</span><span class="accordion-chevron text-sky-300">⌄</span></button>
+              <div class="accordion-content"><div><p class="px-5 pb-5 text-sm leading-7 text-slate-400">By accessing or using WAIN, you agree to these Terms of Service and the policies referenced here. If you do not agree, do not use the platform. If you use WAIN on behalf of a community or organisation, you confirm that you are authorised to accept these terms for that organisation.</p></div></div>
+            </article>
+            <article class="accordion rounded-xl border border-white/[.08] bg-white/[.025]">
+              <button class="accordion-trigger flex w-full items-center justify-between gap-4 p-5 text-left" aria-expanded="false"><span class="font-semibold text-slate-100">2. Eligibility and accounts</span><span class="accordion-chevron text-sky-300">⌄</span></button>
+              <div class="accordion-content"><div><p class="px-5 pb-5 text-sm leading-7 text-slate-400">You must meet the minimum age requirements applicable to your use of WAIN and comply with the rules of any connected services. You are responsible for maintaining the confidentiality of your login credentials and for activity carried out through your account. Notify the WAIN team promptly if you suspect unauthorised access.</p></div></div>
+            </article>
+            <article class="accordion rounded-xl border border-white/[.08] bg-white/[.025]">
+              <button class="accordion-trigger flex w-full items-center justify-between gap-4 p-5 text-left" aria-expanded="false"><span class="font-semibold text-slate-100">3. Permitted platform use</span><span class="accordion-chevron text-sky-300">⌄</span></button>
+              <div class="accordion-content"><div><p class="px-5 pb-5 text-sm leading-7 text-slate-400">WAIN may be used for legitimate ERLC community administration, including staff coordination, moderation workflows, session management and related operational tasks. You must not misuse the platform, disrupt its operation, bypass access controls, probe systems without permission, or use it for unlawful purposes.</p></div></div>
+            </article>
+            <article class="accordion rounded-xl border border-white/[.08] bg-white/[.025]">
+              <button class="accordion-trigger flex w-full items-center justify-between gap-4 p-5 text-left" aria-expanded="false"><span class="font-semibold text-slate-100">4. Community data and content</span><span class="accordion-chevron text-sky-300">⌄</span></button>
+              <div class="accordion-content"><div><p class="px-5 pb-5 text-sm leading-7 text-slate-400">You are responsible for ensuring that information you submit is accurate, appropriate and shared with a proper basis. Do not upload content that infringes another person's rights, exposes sensitive personal information without authorisation, or violates applicable law. You retain any rights you hold in content you submit; you grant WAIN only the permissions reasonably needed to operate and provide the service.</p></div></div>
+            </article>
+            <article class="accordion rounded-xl border border-white/[.08] bg-white/[.025]">
+              <button class="accordion-trigger flex w-full items-center justify-between gap-4 p-5 text-left" aria-expanded="false"><span class="font-semibold text-slate-100">5. Availability and changes</span><span class="accordion-chevron text-sky-300">⌄</span></button>
+              <div class="accordion-content"><div><p class="px-5 pb-5 text-sm leading-7 text-slate-400">WAIN may be updated, suspended or modified to maintain security, improve functionality or address operational needs. We aim to keep the service available but do not guarantee uninterrupted or error-free operation. Where reasonably practicable, material changes will be communicated through [insert announcement channel].</p></div></div>
+            </article>
+            <article class="accordion rounded-xl border border-white/[.08] bg-white/[.025]">
+              <button class="accordion-trigger flex w-full items-center justify-between gap-4 p-5 text-left" aria-expanded="false"><span class="font-semibold text-slate-100">6. Suspension and termination</span><span class="accordion-chevron text-sky-300">⌄</span></button>
+              <div class="accordion-content"><div><p class="px-5 pb-5 text-sm leading-7 text-slate-400">Access may be restricted or terminated where we reasonably believe these terms have been breached, the platform is at risk, or continued access could harm users or communities. Where appropriate, we will provide notice and an opportunity to address the issue. You may stop using WAIN at any time.</p></div></div>
+            </article>
+            <article class="accordion rounded-xl border border-white/[.08] bg-white/[.025]">
+              <button class="accordion-trigger flex w-full items-center justify-between gap-4 p-5 text-left" aria-expanded="false"><span class="font-semibold text-slate-100">7. Disclaimers and liability</span><span class="accordion-chevron text-sky-300">⌄</span></button>
+              <div class="accordion-content"><div><p class="px-5 pb-5 text-sm leading-7 text-slate-400">To the extent permitted by applicable law, WAIN is provided on an “as is” and “as available” basis. Nothing in these terms excludes or limits liability that cannot lawfully be excluded or limited. Any other limitations, governing law and dispute provisions must be completed and reviewed for the jurisdiction in which WAIN operates.</p></div></div>
+            </article>
+            <article class="accordion rounded-xl border border-white/[.08] bg-white/[.025]">
+              <button class="accordion-trigger flex w-full items-center justify-between gap-4 p-5 text-left" aria-expanded="false"><span class="font-semibold text-slate-100">8. Third-party services</span><span class="accordion-chevron text-sky-300">⌄</span></button>
+              <div class="accordion-content"><div><p class="px-5 pb-5 text-sm leading-7 text-slate-400">WAIN may integrate with third-party services such as Roblox, Discord or hosting providers. Those services are governed by their own terms and privacy policies. WAIN is not responsible for third-party services that it does not control.</p></div></div>
+            </article>
+          </div>
+        </section>
+
+        <section id="privacy" class="policy-section reveal mb-12 border-t border-white/[.08] pt-10">
+          <p class="text-xs font-bold uppercase tracking-[.2em] text-sky-400">03 / Information</p>
+          <h2 class="display mt-3 text-3xl font-semibold text-white">Privacy Policy</h2>
+          <p class="mt-3 text-sm text-slate-500">This section should be aligned with WAIN's real technical setup and retention practices.</p>
+          <div class="mt-7 space-y-6">
+            <div><h3 class="text-lg font-semibold text-white">Information we may process</h3><p class="mt-2 text-sm leading-7 text-slate-400">Depending on the features enabled, WAIN may process account identifiers, usernames, community or staff roles, moderation records, session activity, user-submitted content, and basic technical logs such as timestamps and diagnostic information. List only the categories WAIN actually collects.</p></div>
+            <div><h3 class="text-lg font-semibold text-white">How information is used</h3><p class="mt-2 text-sm leading-7 text-slate-400">Information may be used to authenticate users, provide management tools, support moderation and security, maintain service reliability, investigate reported issues, and respond to support requests. Do not use personal information for unrelated purposes without an appropriate legal basis and notice.</p></div>
+            <div><h3 class="text-lg font-semibold text-white">Sharing and service providers</h3><p class="mt-2 text-sm leading-7 text-slate-400">Identify any hosting, analytics, authentication, database, bot or integration providers that receive information. Explain what is shared, why it is shared, and whether information may be transferred internationally. WAIN should not sell personal information unless this statement is deliberately revised following legal review.</p></div>
+            <div><h3 class="text-lg font-semibold text-white">Retention and security</h3><p class="mt-2 text-sm leading-7 text-slate-400">Set and publish retention periods for account data, logs and moderation records. Apply access controls and appropriate technical and organisational safeguards. No online service can guarantee absolute security.</p></div>
+            <div><h3 class="text-lg font-semibold text-white">Your choices and rights</h3><p class="mt-2 text-sm leading-7 text-slate-400">Depending on your location, you may have rights to access, correct, delete, restrict or object to certain processing, or to make a complaint to a data protection authority. Contact [privacy contact email] to submit a request. Explain any identity checks and legal exceptions that apply.</p></div>
+            <div><h3 class="text-lg font-semibold text-white">Children and age requirements</h3><p class="mt-2 text-sm leading-7 text-slate-400">WAIN is not intended for anyone below the minimum age permitted by applicable law or the connected services' terms. If you believe a child has provided personal information in breach of those requirements, contact [privacy contact email] so the matter can be reviewed.</p></div>
+          </div>
+        </section>
+
+        <section id="guidelines" class="policy-section reveal mb-12 border-t border-white/[.08] pt-10">
+          <p class="text-xs font-bold uppercase tracking-[.2em] text-sky-400">04 / Standards</p>
+          <h2 class="display mt-3 text-3xl font-semibold text-white">Community Guidelines</h2>
+          <p class="mt-3 max-w-3xl text-sm leading-7 text-slate-400">WAIN is designed to help ERLC communities run organised sessions. Everyone using the system should help maintain a respectful and dependable environment.</p>
+          <div class="mt-7 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-xl border border-white/[.08] bg-white/[.025] p-5"><span class="text-xl text-sky-300">01</span><h3 class="mt-3 font-semibold text-white">Respect others</h3><p class="mt-2 text-sm leading-6 text-slate-400">No harassment, threats, hate speech, targeted abuse or discriminatory conduct.</p></div>
+            <div class="rounded-xl border border-white/[.08] bg-white/[.025] p-5"><span class="text-xl text-sky-300">02</span><h3 class="mt-3 font-semibold text-white">Be trustworthy</h3><p class="mt-2 text-sm leading-6 text-slate-400">Do not impersonate staff, falsify records, abuse permissions or misrepresent activity.</p></div>
+            <div class="rounded-xl border border-white/[.08] bg-white/[.025] p-5"><span class="text-xl text-sky-300">03</span><h3 class="mt-3 font-semibold text-white">Protect access</h3><p class="mt-2 text-sm leading-6 text-slate-400">Keep credentials private. Never attempt to access another user's account or data.</p></div>
+            <div class="rounded-xl border border-white/[.08] bg-white/[.025] p-5"><span class="text-xl text-sky-300">04</span><h3 class="mt-3 font-semibold text-white">Use tools properly</h3><p class="mt-2 text-sm leading-6 text-slate-400">Do not spam, exploit bugs, disrupt service or use management tools outside your authority.</p></div>
+          </div>
+          <p class="mt-5 text-sm leading-7 text-slate-500">Violations may result in warnings, permission changes, temporary suspension or permanent removal, depending on severity and context. Provide an appeal route at [appeals contact or process].</p>
+        </section>
+
+        <section id="cookies" class="policy-section reveal mb-12 border-t border-white/[.08] pt-10">
+          <p class="text-xs font-bold uppercase tracking-[.2em] text-sky-400">05 / Browser data</p>
+          <h2 class="display mt-3 text-3xl font-semibold text-white">Cookies & local storage</h2>
+          <p class="mt-4 text-sm leading-7 text-slate-400">WAIN may use essential cookies or browser storage to maintain sign-in sessions, remember preferences and protect the platform. If analytics or advertising technologies are used, identify each provider, explain its purpose and obtain consent where required by law. Update this section to reflect the actual cookies, SDKs and storage mechanisms used by the deployed website.</p>
+        </section>
+
+        <section id="contact" class="policy-section reveal overflow-hidden rounded-2xl border border-sky-400/20 bg-gradient-to-br from-sky-500/[.12] to-indigo-500/[.06] p-7 sm:p-9">
+          <p class="text-xs font-bold uppercase tracking-[.2em] text-sky-300">06 / Get support</p>
+          <h2 class="display mt-3 text-3xl font-semibold text-white">Questions about a policy?</h2>
+          <p class="mt-3 max-w-xl text-sm leading-7 text-slate-400">For questions, privacy requests or concerns about how WAIN is used, contact the team through the official support channel below.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="mailto:[insert-support-email]" class="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-sky-400">Email WAIN support <span>↗</span></a>
+            <a href="[insert-discord-invite]" class="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/[.04] px-5 py-3 text-sm font-semibold text-slate-200 transition hover:bg-white/10">Community support <span>↗</span></a>
+          </div>
+          <p class="mt-5 text-xs text-slate-500">Support email: ibrahimu5664@gmail.com</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/[.07] bg-[#061120]/80">
+    <div class="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-8 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+      <div><div class="display font-bold tracking-[.2em] text-white">WAIN<span class="text-sky-400">.</span></div><p class="mt-1 text-xs text-slate-600">ERLC community management, made clearer.</p></div>
+      <div class="flex flex-wrap gap-x-5 gap-y-2 text-xs text-slate-500"><a href="#terms" class="hover:text-sky-300">Terms</a><a href="#privacy" class="hover:text-sky-300">Privacy</a><a href="#guidelines" class="hover:text-sky-300">Guidelines</a><a href="#contact" class="hover:text-sky-300">Contact</a></div>
+      <p class="text-xs text-slate-600">© <span id="year"></span> WAIN. All rights reserved.</p>
+    </div>
+    <div class="border-t border-white/[.04] px-5 py-3 text-center text-[10px] text-slate-700">WAIN is an independent community management platform and is not affiliated with or endorsed by Roblox or Emergency Response: Liberty County.</div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuButton = document.getElementById('mobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuButton.addEventListener('click', () => {
+      const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden', expanded);
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }));
+
+    // Expandable policy panels
+    document.querySelectorAll('.accordion-trigger').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.accordion');
+        const isOpen = item.classList.toggle('open');
+        button.setAttribute('aria-expanded', String(isOpen));
+      });
+    });
+
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Reading progress indicator
+    const progress = document.getElementById('readingProgress');
+    const updateProgress = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (scrollable > 0 ? window.scrollY / scrollable * 100 : 0) + '%';
+    };
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+
+    // Highlight the current section in the contents navigation
+    const navLinks = [...document.querySelectorAll('.nav-link')];
+    const sections = navLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id));
+        }
+      });
+    }, { rootMargin: '-22% 0px -68% 0px' });
+    sections.forEach(section => sectionObserver.observe(section));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
